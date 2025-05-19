@@ -4,7 +4,7 @@ import pandas as pd
 st.set_page_config(page_title="Sumátor času", page_icon="⏱️")
 
 st.title("⏱️ Sumátor času v CSV")
-st.write("Nahraj CSV soubor obsahující sloupec **"Čas v hodinách"**. Aplikace automaticky spočítá celkový čas a přidá nový řádek.")
+st.write("Nahraj CSV soubor obsahující sloupec **'Čas v hodinách'**. Aplikace automaticky spočítá celkový čas a přidá nový řádek.")
 
 uploaded_file = st.file_uploader("Vyber CSV soubor", type=["csv"])
 
