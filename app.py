@@ -24,10 +24,6 @@ if uploaded_file:
         new_row['Čas v hodinách'] = total
         df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
 
-        st.success(f"✅ Celkový čas: {total} hodin")
-        st.dataframe(df, use_container_width=True)
-
-        # Možnost stáhnout CSV
         csv = df.to_csv(index=False).encode('utf-8')
         st.download_button(
             label="⬇️ Stáhnout upravený CSV",
@@ -35,3 +31,6 @@ if uploaded_file:
             file_name="upraveny_soubor.csv",
             mime="text/csv"
         )
+
+        st.success(f"✅ Celkový čas: {total} hodin")
+        st.dataframe(df, use_container_width=True)
